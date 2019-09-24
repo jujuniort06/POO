@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var cachorro_1 = require("./cachorro");
+var gato_1 = require("./gato");
+var listaMamiferos = [];
+var cachorro = new cachorro_1.Cachorro();
+cachorro.setNome("Maggie");
+listaMamiferos.push(cachorro);
+cachorro = new cachorro_1.Cachorro();
+cachorro.setNome("Thor");
+listaMamiferos.push(cachorro);
+cachorro = new cachorro_1.Cachorro();
+cachorro.setNome("Rex");
+listaMamiferos.push(cachorro);
+var gato = new gato_1.Gato();
+gato.setNome("Gatinho Julio");
+listaMamiferos.push(gato);
+listaMamiferos.forEach(function (element) {
+    element.fazerBarulho();
+});
