@@ -23,6 +23,7 @@ import { Papagaio } from "./aves/papagaio";
     let jaulaDeAves      = new Jaula(5, aves);
     let jaulaDeCachorro  = new Jaula(2, cachorro);
     let jaulaDeJacare    = new Jaula(2, jacare);
+    let jaulaDeJacare02    = new Jaula(3, jacare);
 
     // **** ----  Criação dos animais de tipo Mamifero  ---- ****//
     let cachorro01  = new Cachorro();
@@ -69,6 +70,7 @@ import { Papagaio } from "./aves/papagaio";
     zoologico.addJaulas(jaulaDeAves);
     zoologico.addJaulas(jaulaDeCachorro);
     zoologico.addJaulas(jaulaDeJacare);
+    zoologico.addJaulas(jaulaDeJacare02);
 
     zoologico.listJaulas();
 

@@ -22,6 +22,7 @@ let jaulaDeRepteis = new jaula_1.Jaula(3, repteis);
 let jaulaDeAves = new jaula_1.Jaula(5, aves);
 let jaulaDeCachorro = new jaula_1.Jaula(2, cachorro);
 let jaulaDeJacare = new jaula_1.Jaula(2, jacare);
+let jaulaDeJacare02 = new jaula_1.Jaula(3, jacare);
 // **** ----  Criação dos animais de tipo Mamifero  ---- ****//
 let cachorro01 = new cachorro_1.Cachorro();
 cachorro01.setNome('Cachorro 01');
@@ -55,6 +56,7 @@ zoologico.addJaulas(jaulaDeMamiferos);
 zoologico.addJaulas(jaulaDeAves);
 zoologico.addJaulas(jaulaDeCachorro);
 zoologico.addJaulas(jaulaDeJacare);
+zoologico.addJaulas(jaulaDeJacare02);
 zoologico.listJaulas();
 zoologico.addAnimals(jacare01);
 zoologico.addAnimals(jacare02);

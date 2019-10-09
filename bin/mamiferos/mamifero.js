@@ -6,7 +6,7 @@ class Mamifero extends animal_1.Animal {
         super();
     }
     fazerBarulho() {
-        console.log('Tipo Mamifero de fazendo barulho');
+        console.log('Tipo Mamifero fazendo barulho');
     }
 }
 exports.Mamifero = Mamifero;

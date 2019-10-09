@@ -19,111 +19,15 @@ export class Zoologico{
     public addAnimals(animal : Animal) : void{
         this.animais.push(animal);
 
-        let ImprimirAdicionandoAnimais : Mensagem<string> = new Mensagem<string>("Adicionando o animal " + animal.constructor.name);
+        let ImprimirAdicionandoAnimais : Mensagem<string> = new Mensagem<string>("Adicionando o animal " + animal.constructor.name + " (" + animal.getNome() + ")");
         ImprimirAdicionandoAnimais.ImprimirMensagemComLinha();
 
-        this.colocarAnimalEmJaula(animal);
-    }
-
-    public colocarAnimalEmJaula(animal : Animal){
         for (let i = 0; i < this.jaulas.length; i++) {
             const element = this.jaulas[i];
-
-            if (element.getTipoJaula() instanceof Jacare){
-                if (animal instanceof Jacare){
-                    if (element.getQuantidade() == element.getListaAnimals().length){
-                        let ImprimirQuantidadeNaoDisponivel : Mensagem<string> = new Mensagem<string>("A Jaula de " + element.getTipoJaula().constructor.name + " esta cheia, ela suporte somente " + element.getQuantidade() + " quantidades. \nOperação cancelada!!");
-                        ImprimirQuantidadeNaoDisponivel.ImprimirMensagem();
-
-                        return;
-                    }
-
-                    element.setListaAnimals(animal);
-
-                    let ImprimirAdicionandoAnimaisSucesso : Mensagem<string> = new Mensagem<string>("Adicionado com sucesso!");
-                    ImprimirAdicionandoAnimaisSucesso.ImprimirMensagem();
-                    return;
-                }                
-            }
-
-            if (element.getTipoJaula() instanceof Papagaio){
-                if (animal instanceof Papagaio){
-                    if (element.getQuantidade() == element.getListaAnimals().length){
-                        let ImprimirQuantidadeNaoDisponivel : Mensagem<string> = new Mensagem<string>("A Jaula de " + element.getTipoJaula().constructor.name + " esta cheia, ela suporte somente " + element.getQuantidade() + " quantidades. \nOperação cancelada!!");
-                        ImprimirQuantidadeNaoDisponivel.ImprimirMensagem();
-
-                        return;
-                    }
-
-                    element.setListaAnimals(animal);
-                    let ImprimirAdicionandoAnimaisSucesso : Mensagem<string> = new Mensagem<string>("Adicionado com sucesso!");
-                    ImprimirAdicionandoAnimaisSucesso.ImprimirMensagem();
-                    return;
-                }
-            }
-
-            if (element.getTipoJaula() instanceof Cachorro){
-                if (animal instanceof Cachorro){
-                    if (element.getQuantidade() == element.getListaAnimals().length){
-                        let ImprimirQuantidadeNaoDisponivel : Mensagem<string> = new Mensagem<string>("A Jaula de " + element.getTipoJaula().constructor.name + " esta cheia, ela suporte somente " + element.getQuantidade() + " quantidades. \nOperação cancelada!!");
-                        ImprimirQuantidadeNaoDisponivel.ImprimirMensagem();
-
-                        return;
-                    }
-
-                    element.setListaAnimals(animal);
-                    let ImprimirAdicionandoAnimaisSucesso : Mensagem<string> = new Mensagem<string>("Adicionado com sucesso!");
-                    ImprimirAdicionandoAnimaisSucesso.ImprimirMensagem();
-                    return;
-                }                
-            }
-
-            if (element.getTipoJaula() instanceof Mamifero){
-                if (animal instanceof Mamifero){
-                    if (element.getQuantidade() == element.getListaAnimals().length){
-                        let ImprimirQuantidadeNaoDisponivel : Mensagem<string> = new Mensagem<string>("A Jaula de " + element.getTipoJaula().constructor.name + " esta cheia, ela suporte somente " + element.getQuantidade() + " quantidades. \nOperação cancelada!!");
-                        ImprimirQuantidadeNaoDisponivel.ImprimirMensagem();
-
-                        return;
-                    }
-
-                    element.setListaAnimals(animal);
-                    let ImprimirAdicionandoAnimaisSucesso : Mensagem<string> = new Mensagem<string>("Adicionado com sucesso!");
-                    ImprimirAdicionandoAnimaisSucesso.ImprimirMensagem();
-                    return;
-                }                
-            }
-
-            if (element.getTipoJaula() instanceof Repteis){
-                if (animal instanceof Repteis){
-                    if (element.getQuantidade() == element.getListaAnimals().length){
-                        let ImprimirQuantidadeNaoDisponivel : Mensagem<string> = new Mensagem<string>("A Jaula de " + element.getTipoJaula().constructor.name + " esta cheia, ela suporte somente " + element.getQuantidade() + " quantidades. \nOperação cancelada!!");
-                        ImprimirQuantidadeNaoDisponivel.ImprimirMensagem();
-
-                        return;
-                    }
-
-                    element.setListaAnimals(animal);
-                    let ImprimirAdicionandoAnimaisSucesso : Mensagem<string> = new Mensagem<string>("Adicionado com sucesso!");
-                    ImprimirAdicionandoAnimaisSucesso.ImprimirMensagem();
-                    return;
-                }                
-            }
-
-            if (element.getTipoJaula() instanceof Aves){
-                if (animal instanceof Aves){
-                    if (element.getQuantidade() == element.getListaAnimals().length){
-                        let ImprimirQuantidadeNaoDisponivel : Mensagem<string> = new Mensagem<string>("A Jaula de " + element.getTipoJaula().constructor.name + " esta cheia, ela suporte somente " + element.getQuantidade() + " quantidades. \nOperação cancelada!!");
-                        ImprimirQuantidadeNaoDisponivel.ImprimirMensagemComLinha();
-
-                        return;
-                    }
-
-                    element.setListaAnimals(animal);
-                    let ImprimirAdicionandoAnimaisSucesso : Mensagem<string> = new Mensagem<string>("Adicionado com sucesso!");
-                    ImprimirAdicionandoAnimaisSucesso.ImprimirMensagem();
-                    return;
-                }                
+            
+            if (element.colocarAnimalNaJaula(animal)){
+                element.setListaAnimals(animal);
+                break;
             }
         }
     }
@@ -160,5 +64,10 @@ export class Zoologico{
                 ImprimirListaAnimaisEmJaulas.ImprimirMensagemComLinha();   
             }
         });
+    }
+
+    public agoravai(ARetorno : string) : string {
+
+        return ARetorno;
     }
 }
