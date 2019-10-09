@@ -13,15 +13,27 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var especie_1 = require("./especie");
-var Mamifero = /** @class */ (function (_super) {
-    __extends(Mamifero, _super);
-    function Mamifero() {
-        return _super.call(this) || this;
+var mamifero_1 = require("./mamifero");
+var Gato = /** @class */ (function (_super) {
+    __extends(Gato, _super);
+    function Gato() {
+        var _this = _super.call(this) || this;
+        _this.nome = "";
+        return _this;
     }
-    Mamifero.prototype.andar = function () {
-        console.log("Mamifero andando");
+    Gato.prototype.fazerBarulho = function () {
+        console.log("Miando...");
     };
-    return Mamifero;
-}(especie_1.Especie));
-exports.Mamifero = Mamifero;
+    Gato.prototype.andar = function () {
+        _super.prototype.andar.call(this);
+        console.log("Julio andando");
+    };
+    Gato.prototype.setNome = function (nome) {
+        this.nome = nome;
+    };
+    Gato.prototype.getNome = function () {
+        return this.nome;
+    };
+    return Gato;
+}(mamifero_1.Mamifero));
+exports.Gato = Gato;

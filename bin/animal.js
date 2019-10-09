@@ -1,8 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Animal = /** @class */ (function () {
-    function Animal() {
+class Animal {
+    constructor() {
+        this.nome = "";
     }
-    return Animal;
-}());
+    setNome(ANome) {
+        this.nome = ANome;
+    }
+    getNome() {
+        return this.nome;
+    }
+}
 exports.Animal = Animal;

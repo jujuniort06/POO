@@ -17,23 +17,14 @@ var mamifero_1 = require("./mamifero");
 var Cachorro = /** @class */ (function (_super) {
     __extends(Cachorro, _super);
     function Cachorro() {
-        var _this = _super.call(this) || this;
-        _this.nome = "";
-        return _this;
+        return _super.call(this) || this;
     }
     Cachorro.prototype.fazerBarulho = function () {
         console.log("Latindo...");
     };
     Cachorro.prototype.andar = function () {
         _super.prototype.andar.call(this);
-        this.setTamanho("Grande");
         console.log("Cachorro andando");
-    };
-    Cachorro.prototype.setNome = function (nome) {
-        this.nome = nome;
-    };
-    Cachorro.prototype.getNome = function () {
-        return this.nome;
     };
     return Cachorro;
 }(mamifero_1.Mamifero));

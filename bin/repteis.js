@@ -14,14 +14,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var especie_1 = require("./especie");
-var Mamifero = /** @class */ (function (_super) {
-    __extends(Mamifero, _super);
-    function Mamifero() {
-        return _super.call(this) || this;
+var Repteis = /** @class */ (function (_super) {
+    __extends(Repteis, _super);
+    function Repteis() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Mamifero.prototype.andar = function () {
-        console.log("Mamifero andando");
-    };
-    return Mamifero;
+    return Repteis;
 }(especie_1.Especie));
-exports.Mamifero = Mamifero;
+exports.Repteis = Repteis;
