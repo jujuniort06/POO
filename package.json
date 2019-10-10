@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./bin/index.js"
+    "start": "tsc && node ./bin/Exercicio/indexExercicio.js"
   },
   "author": "",
   "license": "ISC",
