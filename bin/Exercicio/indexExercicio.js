@@ -18,5 +18,5 @@ let direcaoHidraulica = new eletrica_1.Eletrica();
 let contadorQuilometragemGolf = new contadorQuilometragem_1.ContadorQuilometragem();
 let carroGolf = new carro_1.Carro(cambioAutomatico, motorAp, direcaoHidraulica, contadorQuilometragemGolf);
 carroGol.imprimirDadosCarro();
-console.log("-------------------------------------------------------------------------------");
+console.log("------------------;-------------------------------------------------------------");
 carroGolf.imprimirDadosCarro();

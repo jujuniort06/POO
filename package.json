@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./bin/Exercicio/indexExercicio.js"
+    "start": "tsc && node ./bin/prova/indexProva.js"
   },
   "author": "",
   "license": "ISC",
