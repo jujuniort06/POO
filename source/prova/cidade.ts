@@ -34,7 +34,7 @@ export class Cidade {
         element.adicionarImovel(AImovel);
       }
 
-      if (element instanceof Industrial && AImovel instanceof Industrial){
+      if (element instanceof Industrial && AImovel instanceof Industria){
         element.adicionarImovel(AImovel);
       }
     });

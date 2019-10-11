@@ -28,6 +28,4 @@ cidade.adicionarImovel(imovelResidencial2);
 
 cidade.adicionarImovel(imovelComercial);
 
-cidade.listarAreas();
-
-cidade.listarAreas();
+cidade.adicionarImovel(imovelIndustrial);
